@@ -1,0 +1,83 @@
+name: Build Multi‑Arch Docker Image with Nix
+
+permissions:
+  contents: read
+  packages: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.set-tag.outputs.tag }}
+    steps:
+      - id: set-tag
+        run: echo "tag=$(date +%Y%m%d%H%M%S)" >> $GITHUB_OUTPUT
+
+  build:
+    name: Build on ${{ matrix.arch }}
+    runs-on: ${{ matrix.runs_on }}
+    strategy:
+      matrix:
+        include:
+          - arch: amd64
+            runs_on: ubuntu-latest
+            platform: linux/amd64
+          - arch: arm64
+            runs_on: ubuntu-24.04-arm
+            platform: linux/arm64
+    needs: setup
+    env:
+      IMAGE_NAME: ghcr.io/${{ github.repository }}:latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v25
+        with:
+          nix_path: nixpkgs=channel:nixos-25.05
+
+      - name: Build Docker image with Nix
+        run: nix build .#docker -L
+
+      - name: Load into Docker and Tag
+        run: |
+          docker load < ./result
+          IMAGE_ID=$(docker images --format '{{.ID}}' | head -n1)
+          docker tag $IMAGE_ID $IMAGE_NAME-${{ matrix.arch }}
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push per-arch image
+        run: docker push $IMAGE_NAME-${{ matrix.arch }}
+
+  manifest:
+    name: Create Multi‑Arch Manifest
+    runs-on: ubuntu-latest
+    needs: [build, setup]
+    steps:
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create and Push Manifest
+        env:
+          IMAGE_NAME: ghcr.io/${{ github.repository }}:latest
+        run: |
+          docker manifest create $IMAGE_NAME \
+            --amend $IMAGE_NAME-amd64 \
+            --amend $IMAGE_NAME-arm64
+          docker manifest push $IMAGE_NAME
+

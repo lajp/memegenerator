@@ -1,0 +1,29 @@
+# Memes to implement
+
+## Done:
+* [https://knowyourmeme.com/memes/one-does-not-simply-walk-into-mordor](https://knowyourmeme.com/memes/one-does-not-simply-walk-into-mordor)
+* [https://knowyourmeme.com/memes/no-bitches](https://knowyourmeme.com/memes/no-bitches)
+* [https://knowyourmeme.com/memes/facepalm](https://knowyourmeme.com/memes/facepalm)
+* [https://knowyourmeme.com/memes/hide-the-pain-harold](https://knowyourmeme.com/memes/hide-the-pain-harold)
+* [https://knowyourmeme.com/memes/gigachad](https://knowyourmeme.com/memes/gigachad)
+* [https://knowyourmeme.com/memes/woman-yelling-at-a-cat](https://knowyourmeme.com/memes/woman-yelling-at-a-cat)
+* [https://knowyourmeme.com/memes/piper-perri-surrounded](https://knowyourmeme.com/memes/piper-perri-surrounded)
+* https://knowyourmeme.com/memes/when-the-imposter-is-sus-sus-jerma
+## TODO:
+* [https://knowyourmeme.com/memes/bad-luck-brian](https://knowyourmeme.com/memes/bad-luck-brian)
+* [https://knowyourmeme.com/memes/grumpy-cat](https://knowyourmeme.com/memes/grumpy-cat)
+* [https://knowyourmeme.com/memes/cash-me-ousside-howbow-dah](https://knowyourmeme.com/memes/cash-me-ousside-howbow-dah)
+* [https://knowyourmeme.com/memes/stonks](https://knowyourmeme.com/memes/stonks)
+* [https://knowyourmeme.com/memes/mocking-spongebob](https://knowyourmeme.com/memes/mocking-spongebob)
+* [https://knowyourmeme.com/memes/surprised-pikachu](https://knowyourmeme.com/memes/surprised-pikachu)
+* [https://knowyourmeme.com/memes/disaster-girl](https://knowyourmeme.com/memes/disaster-girl)
+* [https://knowyourmeme.com/memes/kekw](https://knowyourmeme.com/memes/kekw)
+* [https://knowyourmeme.com/memes/spider-man-pointing-at-spider-man](https://knowyourmeme.com/memes/spider-man-pointing-at-spider-man)
+* [https://knowyourmeme.com/memes/distracted-boyfriend](https://knowyourmeme.com/memes/distracted-boyfriend)
+* [https://knowyourmeme.com/memes/success-kid-i-hate-sandcastles](https://knowyourmeme.com/memes/success-kid-i-hate-sandcastles)
+* [https://knowyourmeme.com/memes/monkas](https://knowyourmeme.com/memes/monkas)
+* [https://knowyourmeme.com/memes/dat-boi](https://knowyourmeme.com/memes/dat-boi)
+* [https://knowyourmeme.com/memes/philosoraptor](https://knowyourmeme.com/memes/philosoraptor)
+* [https://knowyourmeme.com/memes/pepe-the-frog](https://knowyourmeme.com/memes/pepe-the-frog)
+* [https://knowyourmeme.com/memes/scumbag-steve](https://knowyourmeme.com/memes/scumbag-steve)
+* [https://knowyourmeme.com/memes/hello-there](https://knowyourmeme.com/memes/hello-there)
